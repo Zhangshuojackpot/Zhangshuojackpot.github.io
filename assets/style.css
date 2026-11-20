@@ -1,0 +1,246 @@
+:root {
+  --accent: #8c1d2f;
+  --accent-soft: #f7ecee;
+  --text: #1f2430;
+  --muted: #5c6472;
+  --line: #e6e2dc;
+  --bg: #ffffff;
+  --card: #faf9f7;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+/* Language switch */
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.lang-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: inherit;
+}
+.lang-btn.is-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 0 28px;
+}
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+  border: 3px solid var(--accent-soft);
+  background: var(--card);
+}
+.hero-name { margin: 0; font-size: 34px; line-height: 1.2; }
+.hero-name-en { margin: 2px 0 8px; color: var(--muted); font-size: 17px; }
+.hero-title { margin: 0; font-size: 18px; font-weight: 600; color: var(--accent); }
+.hero-affil { margin: 6px 0 0; font-size: 16px; }
+.hero-field { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+
+/* Contact links */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 8px 0 24px;
+}
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--card);
+}
+.contact-item:hover { border-color: var(--accent); text-decoration: none; }
+
+/* Sections */
+section { padding: 30px 0; border-bottom: 1px solid var(--line); }
+section:last-of-type { border-bottom: none; }
+
+h2 {
+  position: relative;
+  margin: 0 0 18px;
+  font-size: 22px;
+  padding-left: 14px;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.lead { color: var(--text); font-size: 16px; }
+
+.sub-title {
+  margin: 22px 0 10px;
+  font-size: 16px;
+  color: var(--accent);
+}
+
+/* Recruitment highlight */
+.recruit {
+  margin: 8px 0 0;
+  padding: 26px 28px;
+  background: var(--accent-soft);
+  border: 1px solid #ecd4d9;
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+}
+.recruit-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 1px;
+}
+.recruit-title { margin: 12px 0 6px; padding-left: 0; font-size: 24px; }
+.recruit-title::before { display: none; }
+.recruit-lead { margin: 0; font-size: 17px; font-weight: 600; }
+.recruit-list { margin: 8px 0 14px; padding-left: 22px; }
+.recruit-list li { margin: 6px 0; }
+.recruit-note { margin: 0; color: var(--text); }
+.recruit-warn { margin: 14px 0 0; color: var(--accent); font-weight: 600; }
+.recruit-contact { margin: 10px 0 0; font-weight: 600; }
+
+/* Research */
+.research-list { display: grid; gap: 14px; }
+.research-item {
+  padding: 18px 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.research-item h3 { margin: 0 0 6px; font-size: 17px; }
+.research-item p { margin: 0; color: var(--muted); font-size: 14.5px; }
+
+/* Publications */
+.pubs-list { margin: 0; padding-left: 22px; }
+.pubs-list li { margin: 0 0 16px; padding-left: 4px; }
+.pub-title { font-weight: 600; font-size: 15.5px; line-height: 1.5; }
+.pub-meta { color: var(--muted); font-size: 14px; margin: 2px 0 6px; }
+.pub-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.pub-tag {
+  font-size: 12px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid #ecd4d9;
+  white-space: nowrap;
+}
+.pub-year { color: var(--muted); font-size: 13px; }
+.pubs-more { margin: 8px 0 0; font-size: 15px; }
+
+/* Timeline */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 18px; border-left: 2px solid var(--line); }
+.timeline li { position: relative; padding: 0 0 22px 22px; }
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.timeline .tl-time { font-size: 13px; color: var(--accent); font-weight: 600; }
+.timeline .tl-org { font-weight: 600; font-size: 16px; }
+.timeline .tl-role { color: var(--muted); font-size: 14px; }
+
+/* Plain lists */
+.plain-list { margin: 0; padding-left: 22px; }
+.plain-list li { margin: 6px 0; }
+
+/* Footer */
+.site-footer {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.site-footer p { margin: 2px 0; }
+.muted { color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 720px) {
+  .hero { flex-direction: column; text-align: center; gap: 18px; padding-top: 32px; }
+  .avatar { width: 116px; height: 116px; }
+  .contact { justify-content: center; }
+  .recruit { padding: 20px 18px; }
+  h2 { font-size: 20px; }
+}
