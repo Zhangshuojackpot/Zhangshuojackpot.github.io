@@ -62,7 +62,7 @@
 
   var RECRUIT_REQS = [
     { zh: "踏实、兴趣驱动，对科研有持续热情。", en: "Self-motivated, persistent, and genuinely passionate about research." },
-    { zh: "欢迎计算机、生物医学工程、电子信息、人工智能等相关背景。", en: "Backgrounds in computer science, biomedical engineering, electronic information, AI, or related fields are welcome." },
+    { zh: "欢迎人工智能、计算机、生物医学工程、电子信息等相关背景。", en: "Backgrounds in AI, computer science, biomedical engineering, electronic information, or related fields are welcome." },
     { zh: "有高水平文章发表、或硬件系统设计经历者优先考虑。", en: "Priority is given to candidates with strong publications or hardware system design experience." }
   ];
 
